@@ -126,7 +126,7 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
   const source = new THREE.Group();
   source.position.set(SRC_X, 0.25, 0);
   scene.add(source);
-  const body = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.28, 0.9, 24), new THREE.MeshStandardMaterial({ color: 0x3a4660, metalness: 0.6, roughness: 0.35 }));
+  const body = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.28, 0.9, 24), new THREE.MeshStandardMaterial({ color: 0x7f8fb0, metalness: 0.45, roughness: 0.35, emissive: 0x1c2438 }));
   body.rotation.z = Math.PI / 2;
   body.position.x = -0.45;
   source.add(body);
@@ -142,14 +142,18 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
   // --- Barrier with two slits
   const barrier = new THREE.Group();
   scene.add(barrier);
-  const plateMat = new THREE.MeshStandardMaterial({ color: 0x2a3550, metalness: 0.5, roughness: 0.55 });
+  // Steel-blue plates with outlined edges so the wall reads clearly against the dark stage
+  const plateMat = new THREE.MeshStandardMaterial({ color: 0x6f80a6, metalness: 0.3, roughness: 0.5, emissive: 0x1e2840 });
   const unitBox = new THREE.BoxGeometry(1, 1, 1);
+  const edgeGeo = new THREE.EdgesGeometry(unitBox);
+  const edgeMat = new THREE.LineBasicMaterial({ color: 0xb8c6e4, transparent: true, opacity: 0.85 });
   const plates = [0, 1, 2].map(() => {
     const m = new THREE.Mesh(unitBox, plateMat);
+    m.add(new THREE.LineSegments(edgeGeo, edgeMat));
     barrier.add(m);
     return m;
   });
-  const coverMat = new THREE.MeshStandardMaterial({ color: 0x4a2238, metalness: 0.3, roughness: 0.6, emissive: 0x220812 });
+  const coverMat = new THREE.MeshStandardMaterial({ color: 0x9a4470, metalness: 0.25, roughness: 0.55, emissive: 0x3a1026 });
   const covers = [0, 1].map(() => {
     const m = new THREE.Mesh(unitBox, coverMat);
     barrier.add(m);
@@ -245,10 +249,10 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
   scene.add(screen);
   const scrW = 2 * HZ + 0.3;
   const scrH = Y_TOP - Y_BOT;
-  const panelMesh = new THREE.Mesh(new THREE.PlaneGeometry(scrW, scrH), new THREE.MeshStandardMaterial({ color: 0x0b1020, roughness: 0.9, metalness: 0, side: THREE.DoubleSide }));
+  const panelMesh = new THREE.Mesh(new THREE.PlaneGeometry(scrW, scrH), new THREE.MeshStandardMaterial({ color: 0x24304e, roughness: 0.85, metalness: 0, emissive: 0x111a2e, side: THREE.DoubleSide }));
   panelMesh.position.y = (Y_TOP + Y_BOT) / 2;
   screen.add(panelMesh);
-  const frame = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(scrW, scrH)), new THREE.LineBasicMaterial({ color: PALETTE.gridMajor }));
+  const frame = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(scrW, scrH)), new THREE.LineBasicMaterial({ color: 0x8a9bc0 }));
   frame.position.set(0, (Y_TOP + Y_BOT) / 2, 0.005);
   screen.add(frame);
   const sepGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-HZ, BAR_Y0, 0.01), new THREE.Vector3(HZ, BAR_Y0, 0.01), new THREE.Vector3(-HZ, 1.22, 0.01), new THREE.Vector3(HZ, 1.22, 0.01)]);
