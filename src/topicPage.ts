@@ -91,7 +91,7 @@ export async function renderTopic(root: HTMLElement, id: string, tab: TabId | nu
             )
             .join('')}
           <div class="caveat"><h3>What this model leaves out</h3>${renderMath(c.caveats)}</div>
-          <div class="further"><h3>Further reading</h3><ul>${c.further.map((f) => `<li><a href="${f.url}" target="_blank" rel="noopener">${f.label}</a></li>`).join('')}</ul></div>
+          <div class="further"><h3>Sources and further reading</h3><ul>${c.further.map((f) => `<li><a href="${f.url}" target="_blank" rel="noopener">${f.label}</a></li>`).join('')}</ul></div>
         </section>
 
         <section class="pane" id="pane-try" role="tabpanel" aria-labelledby="tab-try">

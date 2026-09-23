@@ -16,9 +16,10 @@ export function renderAtlas(root: HTMLElement): void {
   const live = CATALOG.filter((t) => t.status === 'live').length;
   root.innerHTML = `
     <section class="hero">
-      <p class="eyebrow">An interactive atlas</p>
-      <h1>The hardest ideas in physics, built as experiments you can hold.</h1>
-      <p class="lede">Each tile is a concept that usually takes a semester to click. Open one, spin the 3D scene, move the sliders, and watch the equation come alive. Intuition first, then as much math as you want.</p>
+      <p class="eyebrow">A learning project</p>
+      <h1>A notebook of ideas that took me a while to get.</h1>
+      <p class="lede">I built this atlas to bring together the concepts in physics I kept coming back to. Nothing here is original research. Each topic draws on textbooks, published papers, lecture notes and other people's excellent explanations, which I have tried to condense into one place and simplify. Building a small model you can play with turned out to be the best way I know to learn these ideas.</p>
+      <p class="lede" style="margin-top: 14px">Each tile covers one concept. Explore the 3D scene, change the parameters, and see the physics react. Intuition comes first, and the deeper math is one tab away. Sources are listed at the end of every topic.</p>
       <div class="hero-stats"><span><b>${live}</b> live topics</span>${CATALOG.length - live > 0 ? `<span><b>${CATALOG.length - live}</b> on the roadmap</span>` : `<span><b>${DOMAINS.length}</b> fields of physics</span>`}<span><b>4</b> layers per topic</span></div>
     </section>
 
