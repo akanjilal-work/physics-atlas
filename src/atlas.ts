@@ -18,7 +18,7 @@ export function renderAtlas(root: HTMLElement): void {
     <section class="hero">
       <p class="eyebrow">A learning project</p>
       <h1>A notebook of Physics ideas.</h1>
-      <p class="lede">I built this atlas to bring together the concepts in physics I find very interesting. To put a disclamer, none of this is not my original research. Each topic here is taken from some textbooks, published papers, lecture notes and other people's excellent explanations, which I have tried to condense into one place and simplify. Building a small model you can play with turned out to be the best way I know to learn these ideas.</p>
+      <p class="lede">I built this atlas to bring together the concepts in physics I find very interesting. To put a disclaimer, none of this is my original research. Each topic here is taken from some textbooks, published papers, lecture notes and other people's excellent explanations, which I have tried to condense into one place and simplify. Building a small model you can play with turned out to be the best way I know to learn these ideas.</p>
       <p class="lede" style="margin-top: 14px">Each tile covers one concept. Explore the 3D scene, change the parameters, and see the physics react. Intuition comes first, and the deeper math is one tab away. Sources are listed at the end of every topic.</p>
       <div class="hero-stats"><span><b>${live}</b> live topics</span>${CATALOG.length - live > 0 ? `<span><b>${CATALOG.length - live}</b> on the roadmap</span>` : `<span><b>${DOMAINS.length}</b> fields of physics</span>`}<span><b>4</b> layers per topic</span></div>
     </section>
