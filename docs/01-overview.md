@@ -13,6 +13,6 @@ Physics Atlas explains hard physics through experiments you can hold. It borrows
 
 The pages are layered for readers from curious high-school students to graduate students. Layer 1 needs no math. Layer 2 uses algebra and some calculus. Layer 3 includes derivations at undergraduate level.
 
-## Scope of v0.1
+## Scope of v0.2
 
-There are six live topics across classical mechanics, relativity, quantum mechanics and string theory. Fifteen roadmap tiles show where the atlas grows next.
+There are twelve live topics across classical mechanics, relativity, quantum mechanics and string theory. Nine roadmap tiles show where the atlas grows next.
