@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 
-// GitHub Pages serves the site from /<repo-name>/. Override with BASE=/ for other hosts.
+// Served from the root of physics-atlas.akanjilal.dev (see public/CNAME).
+// Override with BASE=/physics-atlas/ to host under a project-pages path instead.
 export default defineConfig({
-  base: process.env.BASE ?? '/physics-atlas/',
+  base: process.env.BASE ?? '/',
   build: {
     target: 'es2022',
     chunkSizeWarningLimit: 800,

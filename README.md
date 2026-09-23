@@ -2,7 +2,7 @@
 
 Interactive 3D explanations of the hardest ideas in physics. Each topic pairs a live simulation you can rotate and control with four layers of explanation. The layers start with plain intuition and end with derivations.
 
-**Live site:** https://akanjilal-work.github.io/physics-atlas/
+**Live site:** https://physics-atlas.akanjilal.dev
 
 Drag a slider and the matching term in the equation lights up. Change the physics and the scene responds immediately. Every simulation runs in the browser, with no backend.
 
@@ -30,7 +30,7 @@ Fifteen more tiles are on the roadmap, including the three-body problem, hydroge
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/physics-atlas/
+npm run dev        # http://localhost:5173/
 npm test           # 34 numerical checks against analytic results
 npm run build      # static site in dist/
 ```
