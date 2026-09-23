@@ -18,7 +18,7 @@ export function renderAtlas(root: HTMLElement): void {
       <p class="eyebrow">An interactive atlas</p>
       <h1>The hardest ideas in physics, built as experiments you can hold.</h1>
       <p class="lede">Each tile is a concept that usually takes a semester to click. Open one, spin the 3D scene, move the sliders, and watch the equation come alive. Intuition first, then as much math as you want.</p>
-      <div class="hero-stats"><span><b>${live}</b> live topics</span><span><b>${CATALOG.length - live}</b> on the roadmap</span><span><b>4</b> layers per topic</span></div>
+      <div class="hero-stats"><span><b>${live}</b> live topics</span>${CATALOG.length - live > 0 ? `<span><b>${CATALOG.length - live}</b> on the roadmap</span>` : `<span><b>${DOMAINS.length}</b> fields of physics</span>`}<span><b>4</b> layers per topic</span></div>
     </section>
 
     <section class="table" aria-label="Topics">

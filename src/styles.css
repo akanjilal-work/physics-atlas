@@ -12,6 +12,8 @@
   --c-relativity: #7c5cf0;
   --c-quantum: #0f9fb8;
   --c-string: #d9468f;
+  --c-em: #5a8f0e;
+  --c-thermo: #d9531e;
   --ok: #1f9d5b;
   --stage: #070a12;
   --radius: 14px;
@@ -36,6 +38,8 @@
     --c-relativity: #a78bfa;
     --c-quantum: #4fd1e8;
     --c-string: #f472b6;
+    --c-em: #a3e635;
+    --c-thermo: #fb7a4b;
     --ok: #5ee39a;
     color-scheme: dark;
   }
@@ -54,6 +58,8 @@
   --c-relativity: #a78bfa;
   --c-quantum: #4fd1e8;
   --c-string: #f472b6;
+  --c-em: #a3e635;
+  --c-thermo: #fb7a4b;
   --ok: #5ee39a;
   color-scheme: dark;
 }
@@ -84,7 +90,7 @@ button { font: inherit; color: inherit; }
 .brand { display: flex; gap: 10px; align-items: center; font: 700 18px var(--display); text-decoration: none; }
 .brand-mark {
   width: 22px; height: 22px; border-radius: 50%;
-  background: conic-gradient(var(--c-classical), var(--c-relativity), var(--c-quantum), var(--c-string), var(--c-classical));
+  background: conic-gradient(var(--c-classical), var(--c-em), var(--c-thermo), var(--c-relativity), var(--c-quantum), var(--c-string), var(--c-classical));
   box-shadow: inset 0 0 0 5px var(--bg);
 }
 .site-nav { display: flex; gap: 20px; font-size: 14px; }
