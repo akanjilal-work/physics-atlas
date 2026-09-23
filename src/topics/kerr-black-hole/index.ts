@@ -825,7 +825,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'kerr-black-hole',
   number: 23,
-  symbol: 'Kr',
   title: 'Spinning Black Holes',
   domain: 'relativity',
   level: 3,

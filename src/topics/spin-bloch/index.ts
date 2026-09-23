@@ -906,7 +906,6 @@ void main(){ float f = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 2.4); g
 const topic: Topic = {
   id: 'spin-bloch',
   number: 15,
-  symbol: 'Bs',
   title: 'Spin & the Bloch Sphere',
   domain: 'quantum',
   level: 2,

@@ -2,6 +2,7 @@ import { CATALOG, LOADERS, domainOf } from './catalog.ts';
 import { getDone, markDone, resetDone } from './core/progress.ts';
 import { renderMath, tex } from './core/tex.ts';
 import type { Topic, TopicInstance } from './core/types.ts';
+import { topicIcon } from './core/icons.ts';
 
 const TABS = [
   { id: 'intuition', label: 'Intuition' },
@@ -38,7 +39,7 @@ export async function renderTopic(root: HTMLElement, id: string, tab: TabId | nu
     <header class="topic-head">
       <a class="crumb" href="#/">← Atlas</a>
       <div class="topic-title">
-        <div class="mini-tile"><span>${topic.number}</span><b>${topic.symbol}</b></div>
+        <div class="mini-tile"><span>${topic.number}</span>${topicIcon(topic.id, 'mini-icon')}</div>
         <div>
           <p class="eyebrow">${domain.name}</p>
           <h1>${topic.title}</h1>

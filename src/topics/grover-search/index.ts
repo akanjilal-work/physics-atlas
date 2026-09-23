@@ -648,7 +648,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'grover-search',
   number: 26,
-  symbol: 'Gv',
   title: 'Qubits & Grover Search',
   domain: 'quantum',
   level: 2,

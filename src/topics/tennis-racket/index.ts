@@ -654,7 +654,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'tennis-racket',
   number: 2,
-  symbol: 'Dz',
   title: 'The Tennis Racket Effect',
   domain: 'classical',
   level: 2,

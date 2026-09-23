@@ -439,7 +439,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'calabi-yau',
   number: 19,
-  symbol: 'Cy',
   title: 'Calabi–Yau Shapes',
   domain: 'string',
   level: 3,

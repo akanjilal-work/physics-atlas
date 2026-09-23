@@ -834,7 +834,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'entanglement',
   number: 16,
-  symbol: 'En',
   title: 'Entanglement & Bell',
   domain: 'quantum',
   level: 3,

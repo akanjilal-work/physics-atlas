@@ -719,7 +719,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'uncertainty',
   number: 17,
-  symbol: 'Un',
   title: 'The Uncertainty Principle',
   domain: 'quantum',
   level: 1,

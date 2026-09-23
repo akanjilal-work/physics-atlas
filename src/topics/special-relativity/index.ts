@@ -687,7 +687,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'special-relativity',
   number: 7,
-  symbol: 'Sr',
   title: 'Special Relativity',
   domain: 'relativity',
   level: 2,

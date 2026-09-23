@@ -362,7 +362,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'double-pendulum',
   number: 1,
-  symbol: 'Dp',
   title: 'Chaos & the Double Pendulum',
   domain: 'classical',
   level: 1,

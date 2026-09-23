@@ -781,7 +781,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'double-slit',
   number: 14,
-  symbol: 'Ds',
   title: 'The Double Slit',
   domain: 'quantum',
   level: 1,

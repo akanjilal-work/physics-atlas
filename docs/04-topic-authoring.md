@@ -14,7 +14,7 @@ tests/topics/<id>.ts   numerical checks for physics.ts
 
 The contracts are in `src/core/types.ts`.
 
-- `index.ts` default-exports a `Topic` whose metadata (`id`, `number`, `symbol`, `title`, `domain`, `level`, `tagline`) matches its entry in `src/catalog.ts`.
+- `index.ts` default-exports a `Topic` whose metadata (`id`, `number`, `title`, `domain`, `level`, `tagline`) matches its entry in `src/catalog.ts`. Add a line icon for the tile to `src/core/icons.ts`, keyed by the topic `id`.
 - `mount({ viewport, panel })` builds the scene and controls, and returns `{ state(), dispose() }`.
 - `state()` returns a flat object of numbers, booleans and strings. The page polls it every 250 ms to run the challenge checks.
 - `dispose()` must remove everything the topic added: the stage, overlay canvases, and listeners on `window` or `document`.

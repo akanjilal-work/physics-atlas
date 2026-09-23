@@ -1149,7 +1149,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'cosmic-strings',
   number: 27,
-  symbol: 'Cs',
   title: 'Cosmic Strings',
   domain: 'string',
   level: 3,

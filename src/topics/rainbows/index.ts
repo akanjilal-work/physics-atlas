@@ -790,7 +790,6 @@ ${useFresnel ? '<div>Brightness: Fresnel, relative to the Descartes ray.</div>' 
 const topic: Topic = {
   id: 'rainbows',
   number: 30,
-  symbol: 'Rb',
   title: 'How a Rainbow Works',
   domain: 'em',
   level: 1,

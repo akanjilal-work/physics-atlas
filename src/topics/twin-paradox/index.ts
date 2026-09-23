@@ -723,7 +723,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'twin-paradox',
   number: 9,
-  symbol: 'Tw',
   title: 'The Twin Paradox',
   domain: 'relativity',
   level: 2,

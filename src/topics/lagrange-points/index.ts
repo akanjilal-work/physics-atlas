@@ -670,7 +670,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'lagrange-points',
   number: 4,
-  symbol: 'Lg',
   title: 'Lagrange Points',
   domain: 'classical',
   level: 2,

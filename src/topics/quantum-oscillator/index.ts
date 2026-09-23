@@ -791,7 +791,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'quantum-oscillator',
   number: 25,
-  symbol: 'Qo',
   title: 'The Quantum Oscillator',
   domain: 'quantum',
   level: 2,

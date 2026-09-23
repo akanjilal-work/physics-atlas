@@ -1108,7 +1108,6 @@ const HUBBLE_FACTOR = (H0: number) => H0 / h0Gyr(H0);
 const topic: Topic = {
   id: 'cosmic-expansion',
   number: 24,
-  symbol: 'Cm',
   title: 'The Expanding Universe',
   domain: 'relativity',
   level: 2,

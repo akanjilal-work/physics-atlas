@@ -650,7 +650,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'curved-spacetime',
   number: 8,
-  symbol: 'Gr',
   title: 'Curved Spacetime & Orbits',
   domain: 'relativity',
   level: 3,

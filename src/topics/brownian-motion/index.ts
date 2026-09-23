@@ -818,7 +818,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'brownian-motion',
   number: 33,
-  symbol: 'Bw',
   title: 'Brownian Motion',
   domain: 'thermo',
   level: 1,

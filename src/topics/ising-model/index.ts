@@ -566,7 +566,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'ising-model',
   number: 31,
-  symbol: 'Is',
   title: 'Phase Transitions & the Ising Model',
   domain: 'thermo',
   level: 2,

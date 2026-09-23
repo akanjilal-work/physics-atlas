@@ -861,7 +861,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'holography',
   number: 21,
-  symbol: 'Ho',
   title: 'Holography',
   domain: 'string',
   level: 3,

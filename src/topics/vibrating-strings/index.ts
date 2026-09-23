@@ -676,7 +676,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'vibrating-strings',
   number: 18,
-  symbol: 'St',
   title: 'Strings & Extra Dimensions',
   domain: 'string',
   level: 3,

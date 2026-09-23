@@ -589,7 +589,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'three-body',
   number: 3,
-  symbol: 'Tb',
   title: 'The Three-Body Problem',
   domain: 'classical',
   level: 2,

@@ -1021,7 +1021,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'magnetic-fields',
   number: 29,
-  symbol: 'Mf',
   title: 'Charges in Magnetic Fields',
   domain: 'em',
   level: 2,

@@ -808,7 +808,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'hydrogen-orbitals',
   number: 13,
-  symbol: 'Hy',
   title: 'Hydrogen Orbitals',
   domain: 'quantum',
   level: 2,

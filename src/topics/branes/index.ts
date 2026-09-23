@@ -1051,7 +1051,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'branes',
   number: 20,
-  symbol: 'Br',
   title: 'D-Branes',
   domain: 'string',
   level: 3,

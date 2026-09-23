@@ -733,7 +733,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'gravitational-waves',
   number: 11,
-  symbol: 'Gw',
   title: 'Gravitational Waves',
   domain: 'relativity',
   level: 3,

@@ -1,5 +1,6 @@
 import { CATALOG, DOMAINS } from './catalog.ts';
 import { getDone } from './core/progress.ts';
+import { topicIcon } from './core/icons.ts';
 
 const LAYERS = [
   { n: '1', name: 'Intuition', text: 'A live 3D scene and a plain-language story. No equations needed.' },
@@ -36,7 +37,7 @@ export function renderAtlas(root: HTMLElement): void {
                 const inner = `
                   <span class="tile-num">${t.number}</span>
                   ${dots(t.level)}
-                  <span class="tile-sym">${t.symbol}</span>
+                  ${topicIcon(t.id)}
                   <span class="tile-name">${t.title}</span>
                   ${t.status === 'soon' ? '<span class="tile-flag">soon</span>' : done ? `<span class="tile-flag done">${done} solved</span>` : ''}
                   <span class="tile-tip">${t.tagline}</span>`;

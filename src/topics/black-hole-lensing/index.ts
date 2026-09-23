@@ -886,7 +886,6 @@ ${disk ? `<div style="color:${css(PALETTE.amber)}">disk is simplified: no Dopple
 const topic: Topic = {
   id: 'black-hole-lensing',
   number: 10,
-  symbol: 'Bh',
   title: 'Black Hole Lensing',
   domain: 'relativity',
   level: 3,

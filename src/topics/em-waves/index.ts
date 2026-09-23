@@ -963,7 +963,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'em-waves',
   number: 28,
-  symbol: 'Em',
   title: 'Electromagnetic Waves',
   domain: 'em',
   level: 2,

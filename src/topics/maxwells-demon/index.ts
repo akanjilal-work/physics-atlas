@@ -787,7 +787,6 @@ ${row('return error', Number.isFinite(retErr) ? `${retErr < 1e-3 ? retErr.toExpo
 const topic: Topic = {
   id: 'maxwells-demon',
   number: 32,
-  symbol: 'Md',
   title: 'Entropy & Maxwell’s Demon',
   domain: 'thermo',
   level: 2,

@@ -491,7 +491,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'quantum-tunneling',
   number: 12,
-  symbol: 'Qt',
   title: 'Quantum Tunneling',
   domain: 'quantum',
   level: 2,

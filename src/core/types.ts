@@ -14,8 +14,6 @@ export interface TopicMeta {
   id: string;
   /** Atlas tile number, periodic-table style. */
   number: number;
-  /** Two-letter tile symbol, e.g. "Dp". */
-  symbol: string;
   title: string;
   domain: DomainId;
   /** One sentence shown on the tile and in the page header. */

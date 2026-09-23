@@ -631,7 +631,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'foucault-pendulum',
   number: 22,
-  symbol: 'Fp',
   title: 'The Foucault Pendulum',
   domain: 'classical',
   level: 2,

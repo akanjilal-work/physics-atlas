@@ -1117,7 +1117,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'normal-modes',
   number: 5,
-  symbol: 'Nm',
   title: 'Normal Modes',
   domain: 'classical',
   level: 1,

@@ -604,7 +604,6 @@ function mount({ viewport, panel }: MountContext): TopicInstance {
 const topic: Topic = {
   id: 'gyroscope',
   number: 6,
-  symbol: 'Gy',
   title: 'Gyroscopic Precession',
   domain: 'classical',
   level: 2,
