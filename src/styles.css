@@ -14,6 +14,9 @@
   --c-string: #d9468f;
   --c-em: #5a8f0e;
   --c-thermo: #d9531e;
+  --c-fluids: #0d8a7e;
+  --c-astro: #3a63d8;
+  --c-particle: #d03a3a;
   --ok: #1f9d5b;
   --stage: #070a12;
   --radius: 14px;
@@ -40,6 +43,9 @@
     --c-string: #f472b6;
     --c-em: #a3e635;
     --c-thermo: #fb7a4b;
+    --c-fluids: #2dd4bf;
+    --c-astro: #7aa2ff;
+    --c-particle: #ff6b6b;
     --ok: #5ee39a;
     color-scheme: dark;
   }
@@ -60,6 +66,9 @@
   --c-string: #f472b6;
   --c-em: #a3e635;
   --c-thermo: #fb7a4b;
+  --c-fluids: #2dd4bf;
+  --c-astro: #7aa2ff;
+  --c-particle: #ff6b6b;
   --ok: #5ee39a;
   color-scheme: dark;
 }
@@ -90,7 +99,7 @@ button { font: inherit; color: inherit; }
 .brand { display: flex; gap: 10px; align-items: center; font: 700 18px var(--display); text-decoration: none; }
 .brand-mark {
   width: 22px; height: 22px; border-radius: 50%;
-  background: conic-gradient(var(--c-classical), var(--c-em), var(--c-thermo), var(--c-relativity), var(--c-quantum), var(--c-string), var(--c-classical));
+  background: conic-gradient(var(--c-classical), var(--c-fluids), var(--c-em), var(--c-thermo), var(--c-relativity), var(--c-astro), var(--c-quantum), var(--c-particle), var(--c-string), var(--c-classical));
   box-shadow: inset 0 0 0 5px var(--bg);
 }
 .site-nav { display: flex; gap: 20px; font-size: 14px; }
@@ -173,7 +182,7 @@ main { padding: 0 clamp(16px, 4vw, 40px); max-width: 1440px; margin: 0 auto; }
   background: var(--stage); border: 1px solid var(--line); touch-action: none;
 }
 .stage-canvas { display: block; width: 100% !important; height: 100% !important; }
-.stage-labels { position: absolute; inset: 0; pointer-events: none; }
+.stage-labels { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 .stage-label {
   font: 600 12px var(--mono); color: #dfe6f3; padding: 2px 6px; border-radius: 6px;
   background: rgba(7, 10, 18, 0.66); white-space: nowrap;

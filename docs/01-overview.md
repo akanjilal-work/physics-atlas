@@ -13,6 +13,6 @@ Physics Atlas explains hard physics through experiments you can hold. It borrows
 
 The pages are layered for readers from curious high-school students to graduate students. Layer 1 needs no math. Layer 2 uses algebra and some calculus. Layer 3 includes derivations at undergraduate level.
 
-## Scope of v0.3
+## Scope of v0.4
 
-There are 33 live topics across six fields: classical mechanics, electromagnetism and light, thermodynamics and statistical physics, relativity, quantum mechanics and string theory. Every tile on the original roadmap is now live.
+There are 65 live topics across nine fields: classical mechanics, fluids and waves, electromagnetism and light, thermodynamics and statistical physics, relativity, astrophysics, quantum mechanics, nuclear and particle physics, and string theory.

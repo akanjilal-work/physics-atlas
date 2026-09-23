@@ -1,6 +1,6 @@
 {
   "name": "physics-atlas",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Interactive 3D explanations of hard physics: classical chaos, relativity, quantum mechanics and string theory.",
   "type": "module",

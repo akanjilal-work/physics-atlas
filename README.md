@@ -8,14 +8,17 @@ Drag a slider and the matching term in the equation lights up. Change the physic
 
 ## Topics
 
-33 live topics across six fields:
+65 live topics across nine fields:
 
-- **Classical Mechanics:** Double Pendulum, Tennis Racket Effect, Three-Body Problem, Lagrange Points, Normal Modes, Gyroscopic Precession, Foucault Pendulum
-- **Electromagnetism & Light:** Electromagnetic Waves, Charges in Magnetic Fields, How a Rainbow Works
-- **Thermo & Statistical:** Ising Model, Maxwell's Demon, Brownian Motion
-- **Relativity:** Special Relativity, Curved Spacetime, Twin Paradox, Black Hole Lensing, Gravitational Waves, Spinning Black Holes, Expanding Universe
-- **Quantum Mechanics:** Tunneling, Hydrogen Orbitals, Double Slit, Bloch Sphere, Entanglement & Bell, Uncertainty Principle, Quantum Oscillator, Grover Search
-- **String Theory:** Strings & Extra Dimensions, Calabi–Yau Shapes, D-Branes, Holography, Cosmic Strings
+- **Classical Mechanics:** Double Pendulum, Tennis Racket Effect, Three-Body Problem, Lagrange Points, Normal Modes, Gyroscopic Precession, Foucault Pendulum, Lorenz Attractor, Solitons, Kepler Orbits & Slingshots, Rattleback
+- **Fluids & Waves:** Vortex Rings, Kármán Vortex Street, Chladni Figures, Doppler Effect
+- **Electromagnetism & Light:** Electromagnetic Waves, Charges in Magnetic Fields, Rainbows, Superconductivity, Maxwell's Equations, Lasers, Cherenkov Radiation
+- **Thermo & Statistical:** Ising Model, Maxwell's Demon, Brownian Motion, Heat Engines & Carnot, Percolation, Bose–Einstein Condensates
+- **Relativity:** Special Relativity, Curved Spacetime, Twin Paradox, Black Hole Lensing, Gravitational Waves, Spinning Black Holes, Expanding Universe, Wormholes, Hawking Radiation, Flying Near Light Speed
+- **Astrophysics:** Lives of Stars, Neutron Stars & Pulsars, Dark Matter, Finding Exoplanets
+- **Quantum Mechanics:** Tunneling, Hydrogen Orbitals, Double Slit, Bloch Sphere, Entanglement & Bell, Uncertainty Principle, Quantum Oscillator, Grover Search, Quantum Teleportation, Shor's Algorithm, Quantum Zeno Effect, Crystals & Energy Bands
+- **Nuclear & Particle:** Standard Model, Neutrino Oscillations, Fusion in the Sun, Nuclear Binding Energy
+- **String Theory:** Strings & Extra Dimensions, Calabi–Yau Shapes, D-Branes, Holography, Cosmic Strings, Supersymmetry, String Landscape
 
 ## The four layers
 
@@ -29,7 +32,7 @@ Drag a slider and the matching term in the equation lights up. Change the physic
 ```bash
 npm install
 npm run dev        # http://localhost:5173/
-npm test           # 209 numerical checks against analytic results
+npm test           # 413 numerical checks against analytic results
 npm run build      # static site in dist/
 ```
 
