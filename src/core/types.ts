@@ -1,6 +1,6 @@
 // Shared contracts for every topic in the atlas.
 
-export type DomainId = 'classical' | 'fluids' | 'em' | 'thermo' | 'relativity' | 'astro' | 'quantum' | 'particle' | 'string';
+export type DomainId = 'foundations' | 'classical' | 'fluids' | 'em' | 'thermo' | 'relativity' | 'astro' | 'cosmology' | 'quantum' | 'particle' | 'string';
 
 export interface Domain {
   id: DomainId;

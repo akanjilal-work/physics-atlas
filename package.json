@@ -1,6 +1,6 @@
 {
   "name": "physics-atlas",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Interactive 3D explanations of hard physics: classical chaos, relativity, quantum mechanics and string theory.",
   "type": "module",
@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "node --experimental-strip-types --no-warnings tests/run.ts"
+    "test": "node --experimental-strip-types --no-warnings tests/run.ts",
+    "test:one": "node --experimental-strip-types --no-warnings tests/one.ts"
   },
   "license": "MIT",
   "dependencies": {

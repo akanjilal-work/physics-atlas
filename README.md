@@ -8,16 +8,18 @@ Drag a slider and the matching term in the equation lights up. Change the physic
 
 ## Topics
 
-65 live topics across nine fields:
+98 live topics across eleven fields:
 
-- **Classical Mechanics:** Double Pendulum, Tennis Racket Effect, Three-Body Problem, Lagrange Points, Normal Modes, Gyroscopic Precession, Foucault Pendulum, Lorenz Attractor, Solitons, Kepler Orbits & Slingshots, Rattleback
+- **Foundations:** Least Action & Path Integrals, Noether's Theorem, Gauge Symmetry, Spontaneous Symmetry Breaking, Quantum Fields, Casimir Effect
+- **Classical Mechanics:** Double Pendulum, Tennis Racket Effect, Three-Body Problem, Lagrange Points, Normal Modes, Gyroscopic Precession, Foucault Pendulum, Lorenz Attractor, Solitons, Kepler Orbits & Slingshots, Rattleback, Tides & the Roche Limit
 - **Fluids & Waves:** Vortex Rings, Kármán Vortex Street, Chladni Figures, Doppler Effect
-- **Electromagnetism & Light:** Electromagnetic Waves, Charges in Magnetic Fields, Rainbows, Superconductivity, Maxwell's Equations, Lasers, Cherenkov Radiation
+- **Electromagnetism & Light:** Electromagnetic Waves, Charges in Magnetic Fields, Rainbows, Superconductivity, Maxwell's Equations, Lasers, Cherenkov Radiation, Plasma & Fusion Confinement
 - **Thermo & Statistical:** Ising Model, Maxwell's Demon, Brownian Motion, Heat Engines & Carnot, Percolation, Bose–Einstein Condensates
 - **Relativity:** Special Relativity, Curved Spacetime, Twin Paradox, Black Hole Lensing, Gravitational Waves, Spinning Black Holes, Expanding Universe, Wormholes, Hawking Radiation, Flying Near Light Speed
 - **Astrophysics:** Lives of Stars, Neutron Stars & Pulsars, Dark Matter, Finding Exoplanets
-- **Quantum Mechanics:** Tunneling, Hydrogen Orbitals, Double Slit, Bloch Sphere, Entanglement & Bell, Uncertainty Principle, Quantum Oscillator, Grover Search, Quantum Teleportation, Shor's Algorithm, Quantum Zeno Effect, Crystals & Energy Bands
-- **Nuclear & Particle:** Standard Model, Neutrino Oscillations, Fusion in the Sun, Nuclear Binding Energy
+- **Cosmology:** Cosmic Web, Mapping Dark Matter with Light, Hunting Dark Matter, Dark Energy, Cosmic Distance Ladder, Vacuum Energy Puzzle, Fate of the Universe, Cosmic Inflation, The First Three Minutes, Cosmic Microwave Background, A Timeline of Everything
+- **Quantum Mechanics:** Tunneling, Hydrogen Orbitals, Double Slit, Bloch Sphere, Entanglement & Bell, Uncertainty Principle, Quantum Oscillator, Grover Search, Quantum Teleportation, Shor's Algorithm, Quantum Zeno Effect, Crystals & Energy Bands, Quantum Hall Effect, Topological Insulators
+- **Nuclear & Particle:** Standard Model, Neutrino Oscillations, Fusion in the Sun, Nuclear Binding Energy, Inside the Proton, Quarks & Colour Confinement, The Quark Model, The Electron, Muon g−2, The Weak Force, Feynman Diagrams & QED, Antimatter, Why Is There Matter?, Fermions & Bosons, Quark–Gluon Plasma, How Detectors See Particles
 - **String Theory:** Strings & Extra Dimensions, Calabi–Yau Shapes, D-Branes, Holography, Cosmic Strings, Supersymmetry, String Landscape
 
 ## The four layers
@@ -32,7 +34,8 @@ Drag a slider and the matching term in the equation lights up. Change the physic
 ```bash
 npm install
 npm run dev        # http://localhost:5173/
-npm test           # 413 numerical checks against analytic results
+npm test           # 635 numerical checks against analytic results
+npm run test:one -- <topic-id>   # checks for a single topic
 npm run build      # static site in dist/
 ```
 

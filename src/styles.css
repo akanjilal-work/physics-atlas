@@ -17,6 +17,8 @@
   --c-fluids: #0d8a7e;
   --c-astro: #3a63d8;
   --c-particle: #d03a3a;
+  --c-cosmology: #a07a0c;
+  --c-foundations: #5b6b82;
   --ok: #1f9d5b;
   --stage: #070a12;
   --radius: 14px;
@@ -46,6 +48,8 @@
     --c-fluids: #2dd4bf;
     --c-astro: #7aa2ff;
     --c-particle: #ff6b6b;
+    --c-cosmology: #e9c46a;
+    --c-foundations: #c3cddd;
     --ok: #5ee39a;
     color-scheme: dark;
   }
@@ -69,6 +73,8 @@
   --c-fluids: #2dd4bf;
   --c-astro: #7aa2ff;
   --c-particle: #ff6b6b;
+  --c-cosmology: #e9c46a;
+  --c-foundations: #c3cddd;
   --ok: #5ee39a;
   color-scheme: dark;
 }
@@ -99,7 +105,7 @@ button { font: inherit; color: inherit; }
 .brand { display: flex; gap: 10px; align-items: center; font: 700 18px var(--display); text-decoration: none; }
 .brand-mark {
   width: 22px; height: 22px; border-radius: 50%;
-  background: conic-gradient(var(--c-classical), var(--c-fluids), var(--c-em), var(--c-thermo), var(--c-relativity), var(--c-astro), var(--c-quantum), var(--c-particle), var(--c-string), var(--c-classical));
+  background: conic-gradient(var(--c-foundations), var(--c-classical), var(--c-fluids), var(--c-em), var(--c-thermo), var(--c-relativity), var(--c-astro), var(--c-cosmology), var(--c-quantum), var(--c-particle), var(--c-string), var(--c-foundations));
   box-shadow: inset 0 0 0 5px var(--bg);
 }
 .site-nav { display: flex; gap: 20px; font-size: 14px; }

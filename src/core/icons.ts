@@ -294,7 +294,142 @@ const ICONS: Record<string, string> = {
   'string-landscape':
     `<path d="M2 22c4-6 6-6 9-1s5 5 8-4 5-9 8-1 4 8 7 2 4-7 6-2 3 4 6 1" opacity=".4"/>` +
     `<path d="M2 36c3-8 5-8 7-2s4 6 7-3 4-11 7-3 4 9 7 1 4-9 7-2 3 5 7 1"/>${dot(9, 32.5, 2.4)}`,
+  // Nuclear & particle (pack 5)
+  'inside-the-proton':
+    `<circle cx="24" cy="24" r="20"/>` +
+    wiggle(24, 12, 13, 31, 1.6, 5) + wiggle(24, 12, 35, 31, 1.6, 5) + wiggle(13, 31, 35, 31, 1.6, 5) +
+    `${dot(24, 12, 3.6)}${dot(13, 31, 3.6)}${dot(35, 31, 3.6)}`,
+  'quark-confinement':
+    `<path d="M6 21h14M6 27h14M28 21h14M28 27h14" opacity=".55"/>${dot(6, 24, 3.4)}${dot(20, 24, 3.4)}${dot(28, 24, 3.4)}${dot(42, 24, 3.4)}` +
+    `<path d="M24 12v6M24 30v6" stroke-dasharray="2 2" opacity=".6"/>`,
+  'eightfold-way':
+    `<path d="M16 10h16l8 14-8 14H16L8 24z" opacity=".4"/>` +
+    [[16, 10], [32, 10], [40, 24], [32, 38], [16, 38], [8, 24], [21.5, 24], [26.5, 24]].map(([x, y]) => dot(x, y, 3)).join(''),
+  'the-electron':
+    `${dot(24, 24, 4.5)}<circle cx="24" cy="24" r="10.5" stroke-dasharray="2 2.5" opacity=".7"/><circle cx="24" cy="24" r="17" stroke-dasharray="1.5 3.5" opacity=".4"/>` +
+    `<path d="M24 19V3M20.5 6.5 24 3l3.5 3.5"/>`,
+  'muon-g2':
+    // A muon going round the storage ring, its spin arrow turning a little faster than its path.
+    `<circle cx="24" cy="24" r="16" opacity=".6"/>` +
+    [[0, 70], [120, 205], [240, 340]].map(([pos, spin]) => {
+      const x = 24 + 16 * Math.cos((pos * Math.PI) / 180), y = 24 - 16 * Math.sin((pos * Math.PI) / 180);
+      const ex = x + 7 * Math.cos((spin * Math.PI) / 180), ey = y - 7 * Math.sin((spin * Math.PI) / 180);
+      return `${dot(f(x), f(y), 2.8)}<path d="M${f(x)} ${f(y)}L${f(ex)} ${f(ey)}"/>`;
+    }).join(''),
+  'weak-force':
+    `<path d="M16 44 18 24 16 4"/><path d="M15 36l1.4 3 1.8-3M15.8 12l1.4-3 1.8 3"/>` +
+    wiggle(18, 24, 33, 30, 1.8, 4) + `<path d="M33 30 44 20M33 30l11 10" /><path d="M39 24l2 .2-.6 2M39.5 36.3l1.8-.8-.3 2" opacity=".8"/>`,
+  'feynman-diagrams':
+    `<path d="M4 8 14 24 4 40M44 8 34 24l10 16"/><path d="M8 15l1.6 2.5 1.2-2.8M8.6 33l1.2-2.7 1.6 2.4M39.2 14.8l1.2 2.7 1.6-2.4M39 33.3l1.6-2.5 1.2 2.8" opacity=".8"/>` +
+    wiggle(14, 24, 34, 24, 2.2, 5) + `${dot(14, 24, 2)}${dot(34, 24, 2)}`,
+  antimatter:
+    `${dot(10, 24, 4)}<circle cx="38" cy="24" r="4"/><path d="M16 24h4M32 24h-4" opacity=".6"/>` +
+    `<path d="M24 19l1.5 3.5L29 24l-3.5 1.5L24 29l-1.5-3.5L19 24l3.5-1.5z" fill="currentColor" fill-opacity=".3"/>` +
+    wiggle(24, 18, 24, 4, 2, 4) + wiggle(24, 30, 24, 44, 2, 4),
+  'matter-asymmetry':
+    `<path d="M24 40V14M16 44h16M20 44l4-4 4 4"/><path d="M9 21 39 13"/><path d="M9 21l-5 8h10l-5-8M39 13l-5 8h10l-5-8" opacity=".7"/>` +
+    `${dot(7, 26.5, 1.8)}${dot(11, 26.5, 1.8)}${dot(9, 24, 1.8)}<circle cx="39" cy="18.5" r="1.8"/>`,
+  'spin-statistics':
+    `<path d="M4 40h16M4 30h16M4 20h16M28 40h16M28 30h16M28 20h16" opacity=".4"/>` +
+    `<path d="M9 44v-8M7 38l2-2 2 2M15 36v8M13 42l2 2 2-2M9 34v-8M7 28l2-2 2 2M15 26v8M13 32l2 2 2-2"/>` +
+    `${dot(31, 37.5, 2)}${dot(36, 37.5, 2)}${dot(41, 37.5, 2)}${dot(33.5, 33.5, 2)}${dot(38.5, 33.5, 2)}`,
+  'quark-gluon-plasma':
+    `<circle cx="24" cy="24" r="19" opacity=".5"/>` +
+    [[16, 16], [30, 13], [36, 24], [28, 32], [17, 31], [12, 23], [24, 22], [33, 36], [20, 38]].map(([x, y]) => dot(x, y, 2)).join('') +
+    `<path d="M18 19c1-2 3 0 4-2M30 17c2 1 1 3 3 4M22 28c1 2-1 3 0 5M13 28c2 0 2-2 4-2" opacity=".6"/>`,
+  'particle-detectors':
+    `<circle cx="24" cy="24" r="7" opacity=".5"/><circle cx="24" cy="24" r="13" opacity=".4"/><circle cx="24" cy="24" r="19" opacity=".3"/>` +
+    `<path d="M24 24c4-6 10-10 19-9M24 24c-6-2-12 0-19 6M24 24c1 8-1 14-6 19"/>${dot(24, 24, 2)}`,
+  // Cosmology (pack 5)
+  'cosmic-web':
+    `<path d="M8 12 20 20 34 10M20 20l-4 16M20 20l17 8M34 10l3 18M16 36l21-8M37 28l5 12M8 12 4 26 16 36" opacity=".55"/>` +
+    [[8, 12, 2.4], [20, 20, 3.6], [34, 10, 2.4], [16, 36, 2.8], [37, 28, 3.4], [4, 26, 1.8], [42, 40, 1.8]].map(([x, y, r]) => dot(x, y, r)).join(''),
+  'weak-lensing':
+    `${dot(24, 24, 4.5)}` +
+    [0, 60, 120, 180, 240, 300].map((a) => {
+      const r = 14, x = 24 + r * Math.cos((a * Math.PI) / 180), y = 24 + r * Math.sin((a * Math.PI) / 180);
+      return `<ellipse cx="${f(x)}" cy="${f(y)}" rx="4.5" ry="1.8" transform="rotate(${a + 90} ${f(x)} ${f(y)})"/>`;
+    }).join(''),
+  'hunting-dark-matter':
+    `<ellipse cx="22" cy="18" rx="12" ry="4"/><path d="M10 18v18c0 2.2 5.4 4 12 4s12-1.8 12-4V18"/>` +
+    `<path d="M44 4 26 28" stroke-dasharray="2 2.5" opacity=".6"/><path d="M22 27l1.4 3.2 3.4.8-3.4.8L22 35l-1.4-3.2-3.4-.8 3.4-.8z" fill="currentColor"/>`,
+  'dark-energy':
+    `<path d="M5 3v40h40" opacity=".45"/><path d="M7 41C12 26 17 22 24 22s13 2 18-18"/><path d="M38.5 6.5 42 4l.3 4.2"/>` +
+    `<path d="M7 41C12 26 17 22 24 22s12 4 18 8" stroke-dasharray="3 2.5" opacity=".45"/>`,
+  'distance-ladder':
+    `<path d="M8 44 24 6M20 44 36 6"/><path d="M11 37h12M14 30h12M17 23h12M20 16h12M23 9h11" opacity=".7"/>` +
+    `<path d="M42 5l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2.1 1.1.4-2.3-1.7-1.6 2.4-.3z" fill="currentColor"/>`,
+  'cosmological-constant':
+    `<path d="M8 6h32M8 42h32" /><path d="M24 9v12M24 27v12M20 13l4-4 4 4M20 35l4 4 4-4"/><path d="M19 21l10 2-10 2 10 2" opacity=".7"/>`,
+  'fate-of-universe':
+    `<path d="M5 3v40h40" opacity=".45"/>${dot(8, 40, 2.4)}<path d="M8 40c6-16 14-20 20-18s10 10 14 18" opacity=".6"/>` +
+    `<path d="M8 40c8-18 18-22 36-22"/><path d="M8 40c8-16 16-20 24-22s8-12 10-16" stroke-dasharray="3 2.5" opacity=".8"/>`,
+  'cosmic-inflation':
+    `<rect x="4" y="32" width="10" height="10" rx="1"/><path d="M6 36c2-2 4 2 6 0" opacity=".6"/>` +
+    `<rect x="20" y="4" width="24" height="24" rx="1.5"/><path d="M20 12h24M20 20h24M28 4v24M36 4v24" opacity=".35"/><path d="M15 31l6-6M17 25h4v4" />`,
+  'big-bang-nucleosynthesis':
+    `<circle cx="4" cy="24" r="3"/>${dot(11, 24, 3)}<path d="M16 24h3M17.5 22l1.5 2-1.5 2" opacity=".7"/>` +
+    `<circle cx="23.5" cy="24" r="3"/>${dot(28.5, 24, 3)}<path d="M33 24h2M34 22l1.5 2-1.5 2" opacity=".7"/>` +
+    `${dot(40, 21, 2.8)}<circle cx="44.5" cy="23" r="2.8"/><circle cx="39.5" cy="26.5" r="2.8"/>${dot(44, 28, 2.8)}`,
+  'cmb-acoustic-peaks':
+    `<path d="M5 3v40h40" opacity=".45"/>` +
+    graph((x) => {
+      const u = (x - 6) / 38;
+      return 42 - 30 * Math.exp(-(((u - 0.2) / 0.08) ** 2)) - 13 * Math.exp(-(((u - 0.48) / 0.08) ** 2)) - 12 * Math.exp(-(((u - 0.72) / 0.08) ** 2)) - 4 * u;
+    }, 6, 45, 120),
+  'cosmic-timeline':
+    `<path d="M4 34h40M40 31l4 3-4 3" opacity=".6"/>${dot(6, 34, 3.2)}${dot(14, 34, 1.3)}${dot(20, 34, 1.7)}${dot(26, 34, 2.1)}` +
+    `<path d="M36 22c-4 0-5-5-1-6s6 3 3 6-8 1-8-4 5-8 10-6" />`,
+  // Foundations (pack 5)
+  'least-action':
+    `<path d="M6 38C12 8 22 6 42 12" opacity=".35"/><path d="M6 38c10-6 12-24 36-26" opacity=".35"/><path d="M6 38c4-20 20-10 36-26" stroke-width="2.6"/>` +
+    `${dot(6, 38, 3)}${dot(42, 12, 3)}`,
+  'noether-theorem':
+    `<ellipse cx="24" cy="30" rx="16" ry="6"/><path d="M36 25.5l4 1.2-2.4 3.3" /><path d="M24 30V6M20.5 9.5 24 6l3.5 3.5" stroke-width="2.4"/>${dot(24, 30, 2.2)}`,
+  'gauge-symmetry':
+    [0, 1, 2].flatMap((i) => [0, 1, 2].map((j) => {
+      const cx = 10 + i * 14, cy = 10 + j * 14, a = ((i * 3 + j) * 47 * Math.PI) / 180;
+      return `<circle cx="${cx}" cy="${cy}" r="5" opacity=".55"/><path d="M${cx} ${cy}L${f(cx + 4.6 * Math.cos(a))} ${f(cy - 4.6 * Math.sin(a))}"/>`;
+    })).join(''),
+  'symmetry-breaking':
+    `<path d="M3 12c4 0 7 20 13 20s5-9 8-9 2 9 8 9 9-20 13-20"/><path d="M16 38c3 2 13 2 16 0" stroke-dasharray="2 2" opacity=".5"/>${dot(16, 28.8, 3.2)}` +
+    `<path d="M24 20v-8" stroke-dasharray="1.5 2" opacity=".5"/>`,
+  'quantum-fields':
+    `<path d="M4 34h40" stroke-dasharray="1 3" opacity=".5"/>` +
+    Array.from({ length: 11 }, (_, i) => {
+      const x = 4 + i * 4, y = 34 - 16 * Math.exp(-(((x - 24) / 9) ** 2)) * Math.cos((x - 24) / 2.2);
+      return `<path d="M${x} 34V${f(y)}" opacity=".35"/>${dot(x, f(y), 1.9)}`;
+    }).join(''),
+  'casimir-effect':
+    `<path d="M18 6v36M30 6v36" stroke-width="3"/><path d="M20 24c2-4 3-4 5-.5s3 3.5 5 .5" opacity=".7"/>` +
+    `<path d="M3 16c1.5-3 3-3 4.5 0s3 3 4.5 0M3 32c1.5-3 3-3 4.5 0s3 3 4.5 0M36 16c1.5-3 3-3 4.5 0s3 3 4.5 0M36 32c1.5-3 3-3 4.5 0s3 3 4.5 0" opacity=".45"/>` +
+    `<path d="M9 24h6M12.5 21.5 15 24l-2.5 2.5M39 24h-6M35.5 21.5 33 24l2.5 2.5"/>`,
+  // Quantum (pack 5)
+  'quantum-hall':
+    `<rect x="4" y="12" width="40" height="24" rx="3"/><path d="M10 12h26M36 36H12" /><path d="M32 9.5 36 12l-4 2.5M16 33.5 12 36l4 2.5"/>` +
+    `<circle cx="17" cy="24" r="3.5" opacity=".6"/><circle cx="31" cy="24" r="3.5" opacity=".6"/><circle cx="24" cy="24" r="3.5" opacity=".6"/>`,
+  'topological-insulators':
+    `<path d="M4 20 22 11l22 9-18 9z" /><path d="M4 20v9l22 9 18-9v-9" /><path d="M26 29v9" opacity=".6"/>` +
+    `<path d="M9 20.5l12-6M34 15.5l5 3M11.5 18l-2.5 2.5 3.5.3M36.5 21.3l2.5-2.8-3.6-.1" />`,
+  'tides-roche':
+    `<ellipse cx="14" cy="24" rx="11" ry="9.5"/><path d="M26 24c0-4 10-5 14-2 3 2 0 6-4 5.5-5-.7-10-.5-10-3.5z" />` +
+    `<path d="M14 5a19 19 0 0 1 18 11M14 43a19 19 0 0 0 18-11" stroke-dasharray="1.2 3" stroke-width="2.4" opacity=".6"/>`,
+  'plasma-confinement':
+    `<ellipse cx="24" cy="24" rx="20" ry="11"/><ellipse cx="24" cy="23" rx="8" ry="3.4"/>` +
+    `<path d="M10 17c3 6 3 12 0 16M17 13.6c3 7 3 13-.5 19.5M26 13c2 7 2 14-1 20.5M34 14.5c2.5 6 2 13-1.5 18M40 18c1.5 4 1 9-1 12" opacity=".55"/>`,
 };
+
+/** A wavy line between two points, like a gluon or photon in a Feynman diagram. */
+function wiggle(x1: number, y1: number, x2: number, y2: number, amp: number, waves: number): string {
+  const len = Math.hypot(x2 - x1, y2 - y1);
+  const nx = -(y2 - y1) / len, ny = (x2 - x1) / len;
+  const pts: [number, number][] = [];
+  for (let i = 0; i <= 48; i++) {
+    const t = i / 48, s = amp * Math.sin(t * waves * 2 * Math.PI);
+    pts.push([x1 + (x2 - x1) * t + nx * s, y1 + (y2 - y1) * t + ny * s]);
+  }
+  return poly(pts);
+}
 
 /** Inline SVG for a topic tile. Decorative: the tile title carries the name. */
 export function topicIcon(id: string, cls = 'tile-icon'): string {
